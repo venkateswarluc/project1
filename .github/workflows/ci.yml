@@ -21,9 +21,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Compile
-        run: javac DiamondPattern.java
-      - name: Execute
-        run: java DiamondPattern
+        run: javac PyramidPattern.java
      
   test:
     runs-on: ubuntu-latest
@@ -34,20 +32,19 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
 
-     # - name: npm installation
-      
-      #  run: npm install
+      - name: npm installation
+        run: npm install
 
       - name: unit tests
-        run: npm DiamondPattern        
+        run: npm test        
         
-  #deploy:
-   #  runs-on: ubuntu-latest
+  deploy:
+     runs-on: ubuntu-latest
      
     
-  #steps:
-   #    - uses: actions/checkout@v2
-    #   - name: Execute
-     #    run: | 
-      #        javac DiamondPattern.java
-       #       java DiamondPattern
+     steps:
+       - uses: actions/checkout@v2
+       - name: Execute
+         run: | 
+                javac PyramidPattern.java
+                java PyramidPattern

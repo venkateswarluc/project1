@@ -21,9 +21,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Compile
-        run: javac DiamondPattern.java
+        run: javac PyramidPattern.java
       - name: Execute
-        run: java DiamondPattern
+        run: java PyramidPattern
      
   test:
     runs-on: ubuntu-latest
@@ -39,7 +39,7 @@ jobs:
       #  run: npm install
 
       - name: unit tests
-        run: npm DiamondPattern        
+        run: npm PyramidPattern        
         
   #deploy:
    #  runs-on: ubuntu-latest

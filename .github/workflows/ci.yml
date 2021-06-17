@@ -49,10 +49,12 @@ jobs:
                 javac PyramidPattern.java
                 java PyramidPattern
   
-  #codec-coverage:
-   #  runs-on: ubuntu-latest
+  codec-coverage:
+     runs-on: ubuntu-latest
      
-    # steps:
-     #  - uses: actions/checkout@v2
-      # - name: code-coverage
-       #  run: node bin/check-coverage main1.js
+     steps:
+       - name: Codecov
+         uses: codecov/codecov-action@v1.5.2
+         with:
+           files: PyramidPattern.java 
+             

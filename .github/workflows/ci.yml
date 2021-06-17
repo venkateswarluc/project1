@@ -55,6 +55,8 @@ jobs:
      steps:
        - name: Codecov
          uses: codecov/codecov-action@v1.5.2
-         with:
-           files: PyramidPattern.java 
+       - name: coverage  
+         run: javac PyramidPattern.java
+           
+          
              

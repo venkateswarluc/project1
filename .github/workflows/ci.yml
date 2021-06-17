@@ -55,8 +55,12 @@ jobs:
      steps:
        - name: Codecov
          uses: codecov/codecov-action@v1.5.2
-       - name: coverage  
-         run: javac PyramidPattern.java
+       - name: Code Coverage Report
+         uses: romeovs/lcov-reporter-action@v0.2.11
+         with:
+           github-token: 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
+           lcov-file: PyramidPattern.java
+    
            
           
              

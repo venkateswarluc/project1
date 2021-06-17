@@ -33,8 +33,9 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
 
-      - name: npm installation
-        run: npm install
+     # - name: npm installation
+      
+      #  run: npm install
 
       - name: unit tests
         run: npm test        
@@ -45,4 +46,6 @@ jobs:
      steps:
        - uses: actions/checkout@v2
        - name: Execute
-         run: java DiamondPattern
+         run: | 
+              javac DiamondPattern.java
+              java DiamondPattern
